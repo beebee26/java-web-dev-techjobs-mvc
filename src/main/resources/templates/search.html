@@ -3,6 +3,12 @@
 <head th:replace="fragments :: head">
 </head>
 <body>
+<script>
+    function updateTextInput(val) {
+          document.getElementById('textInput').value=val;
+        }
+</script>
+</script>
 
 <div th:replace="fragments :: page-header"></div>
 
@@ -28,7 +34,7 @@
 
         <p>
             <label for="searchTerm">Keyword:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
+            <input type="text" th:name="searchTerm" id="searchTerm" th:value="${searchTerm}"/>
         </p>
 
         <input type="submit" value="Search" />
@@ -40,11 +46,20 @@
     <table class="job-listing">
         <tr th:each="job : ${jobs}">
             <td>
-                <p th:text="${'ID: ' + job.id}" ></p>
-                <p th:text="${'Employer: ' + job.employer}"></p>
-                <p th:text="${'Location: ' + job.location}" ></p>
-                <p th:text="${'Position Type: ' + job.positionType}" ></p>
-                <p th:text="${'Core Competency: ' + job.coreCompetency}" ></p>
+                <p class="pretty" th:text="${'ID: '}" ></p>
+                <p class="pretty" th:text="${'Name: '}"></p>
+                <p class="pretty" th:text="${'Employer: '}"></p>
+                <p class="pretty" th:text="${'Location: '}" ></p>
+                <p class="pretty" th:text="${'Position Type: '}" ></p>
+                <p class="pretty" th:text="${'Core Competency: '}" ></p>
+            </td>
+            <td>
+                <p class="italicText" th:text="${job.id}" ></p>
+                <p class="italicText" th:text="${job.name}" ></p>
+                <p class="italicText" th:text="${job.employer}"></p>
+                <p class="italicText" th:text="${job.location}" ></p>
+                <p class="italicText" th:text="${job.positionType}" ></p>
+                <p class="italicText" th:text="${job.coreCompetency}" ></p>
             </td>
         </tr>
     </table>

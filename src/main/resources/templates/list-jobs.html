@@ -10,12 +10,13 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-    <table class="table job-listing">
+    <table class="job-listing">
 
         <tr th:each="job : ${jobs}">
             <td>
                 <p th:text="${'Id:  ' + job.id}"></p>
-                <p th:text="${'Name:  ' + job.employer}"></p>
+                <p th:text="${'Name:  ' + job.name}"></p>
+                <p th:text="${'Employer: ' + job.employer}"></p>
                 <p th:text="${'Location:  ' + job.location}"></p>
                 <p th:text="${'Position Type:  ' + job.positionType}"></p>
                 <p th:text="${'Skills:  ' + job.coreCompetency}"></p>

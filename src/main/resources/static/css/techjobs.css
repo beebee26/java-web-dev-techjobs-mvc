@@ -2,6 +2,15 @@
     margin-top: 72px;
 }
 
+.pretty {
+    color: purple;
+
+}
+
+.italicText {
+      font-style: italic;
+}
+
 td, th {
     padding: 10px;
 }
@@ -22,7 +31,9 @@ tr:nth-child(odd) {
     margin-left: auto;
     margin-right: auto;
 }
-
+#colorlist {
+  color: pink;
+}
 table.job-listing {
     margin: 30px auto;
     border: 1px solid #e4e4e4;
@@ -31,6 +42,7 @@ table.job-listing {
 
 table.job-listing td:first-child {
     font-weight: bold;
+
 }
 
 table.job-listing td:last-child {
