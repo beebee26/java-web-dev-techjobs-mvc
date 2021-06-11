@@ -46,20 +46,12 @@
     <table class="job-listing">
         <tr th:each="job : ${jobs}">
             <td>
-                <p class="pretty" th:text="${'ID: '}" ></p>
-                <p class="pretty" th:text="${'Name: '}"></p>
-                <p class="pretty" th:text="${'Employer: '}"></p>
-                <p class="pretty" th:text="${'Location: '}" ></p>
-                <p class="pretty" th:text="${'Position Type: '}" ></p>
-                <p class="pretty" th:text="${'Core Competency: '}" ></p>
-            </td>
-            <td>
-                <p class="italicText" th:text="${job.id}" ></p>
-                <p class="italicText" th:text="${job.name}" ></p>
-                <p class="italicText" th:text="${job.employer}"></p>
-                <p class="italicText" th:text="${job.location}" ></p>
-                <p class="italicText" th:text="${job.positionType}" ></p>
-                <p class="italicText" th:text="${job.coreCompetency}" ></p>
+                <p><b>Id: </b><span class="italicText" th:style="'color: blue'" th:text="${job.id}"></span></p>
+                <p><b>Name: </b><span class="italicText" th:style="'color: blue'" th:text="${job.name}"></span></p>
+                <p><b>Employer: </b><span class="italicText" th:style="'color: blue'" th:text="${job.employer}"></span></p>
+                <p><b>Location: </b><span class="italicText" th:style="'color: blue'" th:text="${job.location}"></span></p>
+                <p><b>Position Type: </b><span class="italicText" th:style="'color: blue'" th:text="${job.positionType}"></span></p>
+                <p><b>Core Competency: </b><span class="italicText" th:style="'color: blue'" th:text="${job.coreCompetency}"></span></p>
             </td>
         </tr>
     </table>
