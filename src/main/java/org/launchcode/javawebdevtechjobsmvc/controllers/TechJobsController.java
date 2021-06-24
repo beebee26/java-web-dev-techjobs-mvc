@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class TechJobsController {
     static HashMap<String, String> columnChoices = new HashMap<>();
     static HashMap<String, String> actionChoices = new HashMap<>();
+    static String home = "TechJobs";
 
     public TechJobsController () {
         columnChoices.put("all", "All");
@@ -26,5 +27,11 @@ public class TechJobsController {
     public static String getActionChoices(Model model) {
         model.addAttribute("actions", actionChoices);
         return "actions";
+    }
+
+    @ModelAttribute("homeLink")
+    public static String getHomeLink(Model model) {
+        model.addAttribute("homeLink", home);
+        return "homeLink";
     }
 }

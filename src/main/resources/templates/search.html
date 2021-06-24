@@ -44,12 +44,12 @@
     <table class="job-listing">
         <tr th:each="job : ${jobs}">
             <td>
-                <p><b>Id: </b><span class="italicText" th:style="'color: blue'" th:text="${job.id}"></span></p>
-                <p><b>Name: </b><span class="italicText" th:style="'color: blue'" th:text="${job.name}"></span></p>
-                <p><b>Employer: </b><span class="italicText" th:style="'color: blue'" th:text="${job.employer}"></span></p>
-                <p><b>Location: </b><span class="italicText" th:style="'color: blue'" th:text="${job.location}"></span></p>
-                <p><b>Position Type: </b><span class="italicText" th:style="'color: blue'" th:text="${job.positionType}"></span></p>
-                <p><b>Core Competency: </b><span class="italicText" th:style="'color: blue'" th:text="${job.coreCompetency}"></span></p>
+                <label class="searchLabel">Id: <span class="italicText" th:style="'color: blue'" th:text="${job.id}"></span></label></br>
+                <label class="searchLabel">Name: <span class="italicText" th:style="'color: blue'" th:text="${job.name}"></span></label></br>
+                <label class="searchLabel">Employer: <span class="italicText" th:style="'color: blue'" th:text="${job.employer}"></span></label></br>
+                <label class="searchLabel">Location: <span class="italicText" th:style="'color: blue'" th:text="${job.location}"></span></label></br>
+                <label class="searchLabel">Position Type: <span class="italicText" th:style="'color: blue'" th:text="${job.positionType}"></span></label></br>
+                <label class="searchLabel">Core Competency: <span class="italicText" th:style="'color: blue'" th:text="${job.coreCompetency}"></span></label>
             </td>
         </tr>
     </table>
